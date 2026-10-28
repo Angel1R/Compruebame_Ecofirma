@@ -1,0 +1,133 @@
+<ion-content [fullscreen]="true">
+  <!-- Navbar -->
+  <div class="navbar">
+    <img src="assets/logo.png" alt="Ecofirma Logo" class="logo" />
+    <div class="nav-links">
+      <a>Inicio</a>
+      <a>Servicios</a>
+      <a>Portafolio</a>
+      <a>Nosotros</a>
+    </div>
+    <ion-button shape="round" color="primary">Contacto</ion-button>
+  </div>
+
+  <!-- Sección 1: Hero (Fondo Azul) -->
+  <div class="hero-section">
+    <ion-grid>
+      <ion-row class="ion-align-items-center">
+        <ion-col size="12" size-md="6">
+          <h1>Transformamos tu organización con soluciones digitales</h1>
+          <p>Reemplazamos procesos basados en papel por documentos con firma digital, cumplimiento CFDI y tecnología regulatoria.</p>
+          <div class="hero-buttons">
+            <ion-button color="primary">Ver proyectos</ion-button>
+            <ion-button color="success">Solicitar presupuesto</ion-button>
+          </div>
+        </ion-col>
+        <ion-col size="12" size-md="6" class="ion-text-center">
+          <!-- Espacio para la imagen de las computadoras del mockup -->
+          <div class="hero-image-placeholder">
+            [Imagen de computadoras/oficina]
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <!-- Sección 2: Servicios (Fondo Blanco) -->
+  <div class="services-section">
+    <h2 class="section-title">Nuestros Servicios</h2>
+    <ion-grid>
+      <ion-row>
+        <!-- Sintaxis moderna de Angular (@for) -->
+        @for (servicio of servicios; track servicio.title) {
+          <ion-col size="12" size-md="3">
+            <ion-card class="service-card">
+              <ion-card-header>
+                <ion-icon [name]="servicio.icon" color="primary"></ion-icon>
+                <ion-card-title>{{ servicio.title }}</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                {{ servicio.desc }}
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        }
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <!-- Sección 3: Portafolio (Fondo Azul Oscuro) -->
+  <div class="portfolio-section">
+    <h2 class="section-title text-white">Nuestros Proyectos Destacados</h2>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" size-md="4">
+          <ion-card class="portfolio-card">
+            <div class="portfolio-img bg-gray"></div>
+            <ion-button expand="full" color="primary">Sector Salud</ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col size="12" size-md="4">
+          <ion-card class="portfolio-card">
+            <div class="portfolio-img bg-gray"></div>
+            <ion-button expand="full" color="success">Sector Justicia</ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col size="12" size-md="4">
+          <ion-card class="portfolio-card">
+            <div class="portfolio-img bg-gray"></div>
+            <ion-button expand="full" color="primary">Gobierno Digital</ion-button>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <!-- Sección 4: Bottom (Proceso, Testimonios y Contacto) -->
+  <div class="bottom-section">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" size-md="4">
+          <h3>Nuestro Proceso</h3>
+          <ul class="process-list">
+            <li><strong>1. Consulta:</strong> Análisis de necesidades.</li>
+            <li><strong>2. Planificación:</strong> Estrategia regulatoria.</li>
+            <li><strong>3. Desarrollo:</strong> Implementación y pruebas.</li>
+          </ul>
+        </ion-col>
+        
+        <ion-col size="12" size-md="4">
+          <h3>Por qué Compruebame</h3>
+          <ion-card>
+            <ion-card-content>
+              "Nos respaldan más de 16 años de experiencia apoyando a contribuyentes e instituciones a cumplir de forma práctica, eficiente y segura."
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <ion-col size="12" size-md="4">
+          <h3>Contáctanos</h3>
+          <ion-item>
+            <ion-input label="Nombre" labelPlacement="floating"></ion-input>
+          </ion-item>
+          <ion-row>
+            <ion-col size="6">
+              <ion-item>
+                <ion-input label="Correo" labelPlacement="floating"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col size="6">
+              <ion-item>
+                <ion-input label="Teléfono" labelPlacement="floating"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-item>
+            <ion-textarea label="Mensaje" labelPlacement="floating"></ion-textarea>
+          </ion-item>
+          <ion-button expand="block" color="primary" class="ion-margin-top">Enviar</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

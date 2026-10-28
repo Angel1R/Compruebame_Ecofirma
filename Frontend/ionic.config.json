@@ -1,0 +1,7 @@
+{
+  "name": "EcoFirma",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
